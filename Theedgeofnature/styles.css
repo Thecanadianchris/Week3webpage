@@ -1,0 +1,102 @@
+:root {
+  --warm-white: #fdfaf5;  /* nav background */
+  --border:     #b0d4e0;  /* nav bottom border */
+  --text:       #0d2d3a;  /* nav links */
+  --bark:       #1a6b8a;  /* logo text + hover colour */
+  --deep:       #0d2d3a;  /* button hover */
+}
+
+
+
+
+
+body {
+  --font-display: 'Playfair Display', times new roman, serif;
+  --font-body:    'Jost', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--warm-white);
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+
+
+.eon-nav {
+  background: rgba(253,250,245,0.97) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: .75rem 0;
+}
+
+
+.nav-logo {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  mix-blend-mode: multiply;  /* removes white background!!! */
+}
+
+
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--bark);
+  letter-spacing: .01em;
+}
+.eon-nav .nav-link {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: .88rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--text) !important;
+  padding: .4rem .8rem !important;
+  transition: color .2s;
+}
+.eon-nav .nav-link:hover { color: var(--bark) !important; }
+
+
+/* Button on Navbar */
+
+.btn-eon {
+  background: var(--bark);
+  color: #fff !important;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: .82rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .7rem 1.6rem;
+  border: 1.5px solid var(--bark);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+  display: inline-block;
+}
+.btn-eon:hover { background: var(--deep); border-color: var(--deep); color: #fff !important; }
+
+.btn-eon-outline {
+  background: transparent;
+  color: var(--bark) !important;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: .82rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .7rem 1.6rem;
+  border: 1.5px solid var(--bark);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+  display: inline-block;
+}
+.btn-eon-outline:hover { background: var(--bark); color: #fff !important; }
+
+
