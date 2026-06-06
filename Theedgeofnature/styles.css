@@ -5,6 +5,11 @@
   --bark:       #1a6b8a;  /* logo text + hover colour */
   --deep:       #0d2d3a;  /* button hover */
   --sand:       #734a08;  /* hero subheading + title highlight */
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+
+
 }
 
 
