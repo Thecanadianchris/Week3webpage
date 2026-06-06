@@ -109,7 +109,14 @@ body {
   transition: background .2s, color .2s;
   display: inline-block;
 }
-.btn-eon-outline:hover { background: var(--bark); color: #fff !important; }
+
+.btn-eon-outline:hover { 
+
+  background: var(--golden);      
+  border-color: var(--golden);    
+  color: #fff !important; 
+
+}
 
 
 
@@ -189,7 +196,7 @@ position: absolute;
 /* Scrollable Gallery */
 
 .gallery-section {
-  padding: 5rem 0;
+  padding: 2rem 0 5rem 0;
 }
 
 .gallery-heading {
