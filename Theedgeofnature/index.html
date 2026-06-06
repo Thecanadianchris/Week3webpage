@@ -7,14 +7,11 @@
     <link rel="stylesheetreset" href="stylesreset.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 </head>
 <body>
-
-
-
-
 
 
 
@@ -66,10 +63,31 @@
 
 
 
+<!-- Gallery Section -->
 
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2 class="gallery-heading">Gallery</h2>
+  </div>
 
+  <div class="gallery-viewport">
+    <div class="gallery-track">
+      <div class="gallery-item"><img src="./images/piece1.jpg" alt="Piece 1"></div>
+      <div class="gallery-item"><img src="./images/piece2.jpg" alt="Piece 2"></div>
+      <div class="gallery-item"><img src="./images/piece3.jpg" alt="Piece 3"></div>
+      <div class="gallery-item"><img src="./images/piece4.jpg" alt="Piece 4"></div>
+      <div class="gallery-item"><img src="./images/piece5.jpg" alt="Piece 5"></div>
+      <div class="gallery-item"><img src="./images/piece6.jpg" alt="Piece 6"></div>
+    </div>
+  </div>
 
+    <!-- arrow buttons -->
+  <div class="gallery-controls">
+    <button id="galleryPrev" class="btn-eon-outline">‹</button>
+    <button id="galleryNext" class="btn-eon-outline">›</button>
+  </div>
 
+</section>
 
 
 
@@ -89,5 +107,40 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Scroll-Section-1 jQuery --> 
+<script>
+$(document).ready(function () {
+
+  var scrollAmount = 340; // how far to jump each click (px)
+
+  // Next arrow — scroll right
+  $('#galleryNext').click(function () {
+    $('.gallery-viewport').animate(
+      { scrollLeft: $('.gallery-viewport').scrollLeft() + scrollAmount },
+      400  // animation speed in ms
+    );
+  });
+
+  // Prev arrow — scroll left
+  $('#galleryPrev').click(function () {
+    $('.gallery-viewport').animate(
+      { scrollLeft: $('.gallery-viewport').scrollLeft() - scrollAmount },
+      400
+    );
+  });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
 </body>
 </html>

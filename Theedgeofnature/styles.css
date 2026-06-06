@@ -4,11 +4,8 @@
   --text:       #0d2d3a;  /* nav links */
   --bark:       #1a6b8a;  /* logo text + hover colour */
   --deep:       #0d2d3a;  /* button hover */
-  --sand:       #efe7da;  /* hero subheading + title highlight */
+  --sand:       #734a08;  /* hero subheading + title highlight */
 }
-
-
-
 
 
 body {
@@ -19,7 +16,15 @@ body {
 body {
   font-family: var(--font-body);
   color: var(--text);
-  background: var(--warm-white);
+  background: linear-gradient(
+    to bottom,
+    var(--warm-white) 0%,
+    var(--warm-white) 40%,   
+    var(--bark)       70%,   
+    var(--deep)       100% 
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
   margin: 0;
   font-weight: 300;
   line-height: 1.7;
@@ -28,7 +33,7 @@ body {
 
 
 .eon-nav {
-  background: rgba(212, 214, 232, 0.97) !important;
+  background: rgba(212, 214, 232, 0.70) !important;
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   padding: .75rem 0;
@@ -103,10 +108,10 @@ body {
 
 
 
-* ---- HERO ---- */
+/* ---- HERO ---- */
 .hero-section {
   position: relative;
-  min-height: 90vh;
+  min-height: 600px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -123,13 +128,17 @@ body {
   max-width: 1066px;
   object-fit: cover;
   object-position: center;
-  opacity: .75;
+  opacity: .99;
 }
 .hero-overlay {
-  position: absolute;
+position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10,42,56,.85) 0%, rgba(10,42,56,.1) 60%);
+  background: linear-gradient(to bottom,
+    rgba(199, 214, 221, 0) 0%,
+    rgba(180, 196, 203, 0.9) 100%);
 }
+
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -156,11 +165,60 @@ body {
 .hero-title em { font-style: italic; color: var(--sand); }
 .hero-sub {
   color: var(--sand);
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 300;
   max-width: 420px;
   margin-bottom: 2rem;
   line-height: 1.7;
+}
+
+
+
+
+
+
+/* Scrollable Gallery */
+
+.gallery-section {
+  padding: 5rem 0;
+}
+
+.gallery-heading {
+  font-family: var(--font-display);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--sand);
+  margin-bottom: 2rem;
+}
+.gallery-viewport {
+  overflow: hidden;       /* clips images outside the view */
+  width: 100%;
+}
+.gallery-track {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  width: max-content;     /* as wide as all images combined */
+}
+.gallery-item {
+  flex-shrink: 0;
+  width: 320px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.gallery-item img {
+  width: 100%;
+height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 
@@ -180,7 +238,7 @@ body {
 
 
 @media (max-width: 767px) {
-  .py-section    { padding: 3.5rem 0; }
+  .py-section    { padding: 3.5rem 0;}
 
 }
 
@@ -226,3 +284,11 @@ body {
   .py-section { padding: 3.5rem 0; }
 
 }
+
+
+
+
+
+
+
+
