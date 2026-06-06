@@ -1,6 +1,6 @@
 :root {
   --warm-white: #f8f0e5;  /* nav background */
-  --border:     #b0d4e0;  /* nav bottom border */
+  --border:     #cfa15b;  /* nav bottom border */
   --text:       #0d2d3a;  /* nav links */
   --bark:       #1a6b8a;  /* logo text + hover colour */
   --deep:       #0d2d3a;  /* button hover */
@@ -50,7 +50,7 @@ body {
   height: 80px;
   width: 80px;
   object-fit: contain;
-  mix-blend-mode: multiply;  /* removes white background!!! */
+  mix-blend-mode: multiply;  
 }
 
 
@@ -92,7 +92,7 @@ body {
   transition: background .2s, color .2s;
   display: inline-block;
 }
-.btn-eon:hover { background: var(--deep); border-color: var(--deep); color: #fff !important; }
+.btn-eon:hover { background: var(--golden); border-color: var(--deep); color: #fff !important; }
 
 .btn-eon-outline {
   background: transparent;
