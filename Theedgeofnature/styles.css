@@ -5,6 +5,7 @@
   --bark:       #1a6b8a;  /* logo text + hover colour */
   --deep:       #0d2d3a;  /* button hover */
   --sand:       #734a08;  /* hero subheading + title highlight */
+  --golden:     #cfa15b;  /* gallery heading */
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Jost', sans-serif;
@@ -173,7 +174,7 @@ position: absolute;
 .hero-title em { font-style: italic; color: var(--sand); }
 .hero-sub {
   color: var(--sand);
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 300;
   max-width: 420px;
   margin-bottom: 2rem;
@@ -194,9 +195,9 @@ position: absolute;
 .gallery-heading {
   font-family: var(--font-display);
   text-align: center;
-  font-size: 2rem;
+  font-size: 40px;
   font-weight: 400;
-  color: var(--sand);
+  color: var(--golden);
   margin-bottom: 2rem;
 }
 .gallery-viewport {
