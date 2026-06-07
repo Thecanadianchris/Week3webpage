@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Edge of Nature - Resin Art</title>
-    <link rel="stylesheet" href="stylesreset2.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
+ 
+  <link rel="stylesheet" href="stylesreset2.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+   
+
+  
 </head>
 <body>
 
@@ -17,98 +20,254 @@
 
     <!-- Navigation Bar -->
 
-<nav class="navbar navbar-expand-lg eon-nav sticky-top">
-  <div class="container">
+  <nav class="navbar navbar-expand-lg eon-nav sticky-top">
+    <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img class="nav-logo" src="./images/eonlogo.png" alt="The Edge Of Nature logo">
-      <span class="logo-text">The Edge Of Nature</span>
-    </a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img class="nav-logo mr-2" src="./images/eonlogo.png" alt="The Edge Of Nature logo">
+        <span class="logo-text">The Edge Of Nature</span>
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-label="Toggle menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button"
+              data-toggle="collapse"
+              data-target="#navMain"
+              aria-controls="navMain"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="navbar-nav ms-auto gap-1 align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item ms-lg-3">
-          <a class="btn btn-eon" href="#contact">Get in touch</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ml-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#art">Our Art</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item ml-lg-3">
+            <a class="btn btn-eon" href="#contact">Get in touch</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
-  </div>
-</nav>
-
+  </nav>
 
 
 <!-- Hero Section -->
 
-<section class="hero-section">
- 
- 
-  <img class="hero-img" src="./images/wave.jpg" alt="Beautiful bespoke resin and wood piece"
-       onerror="this.style.display='none'" />
 
-  <div class="hero-overlay"></div>
 
-  <div class="container hero-content">
-    <h2 class="hero-sub"><em>Handcrafted in Cornwall</em></h2>
-    <h1 class="hero-title">Where Nature<br><em>meets craft</em></h1>
-    <p class="hero-sub">Bespoke pieces for your home made with natural wood, metal and resin.</p>
 
-  </div>
-</section>
+ <section class="hero-section">
+
+    <img class="hero-img"
+         src="./images/wave.jpg"
+         alt="Aerial view of Cornish waves"
+         onerror="this.style.display='none'">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <h2 class="hero-sub"><em>Handcrafted in Cornwall</em></h2>
+      <h1 class="hero-title">Where Nature<br><em>meets craft</em></h1>
+      <p class="hero-sub">Bespoke pieces for your home made with natural wood, metal and resin.</p>
+      <a href="#art" class="btn btn-eon mt-3">View our art</a>
+    </div>
+
+  </section>
+
+
+
 
 
 
 <!-- Gallery Section -->
 
-<section id="gallery" class="gallery-section">
-  <div class="container">
-    <h2 class="gallery-heading">Gallery</h2>
-  </div>
-
-  <div class="gallery-viewport">
-    <div class="gallery-track">
-      <div class="gallery-item"><img src="./images/resinwave.JPG" alt="Piece 1"></div>
-      <div class="gallery-item"><img src="./images/resinslateframed.JPG" alt="Piece 2"></div>
-      <div class="gallery-item"><img src="./images/resinframedonrock.JPG" alt="Piece 3"></div>
-      <div class="gallery-item"><img src="./images/img0489.jpg" alt="Piece 4"></div>
-      <div class="gallery-item"><img src="./images/img2690.jpg"  alt="Piece 5"></div>
-      <div class="gallery-item"><img src="./images/img2981.jpg" alt="Piece 6"></div>
+ <section id="gallery" class="gallery-section">
+    <div class="container">
+      <h2 class="gallery-heading">Gallery</h2>
     </div>
+
+    <div class="gallery-viewport">
+      <div class="gallery-track">
+        <div class="gallery-item"><img src="./images/resinwave.JPG"         alt="Resin wave piece"></div>
+        <div class="gallery-item"><img src="./images/resinslateframed.JPG"  alt="Resin on slate framed"></div>
+        <div class="gallery-item"><img src="./images/resinframedonrock.JPG" alt="Resin framed on rock"></div>
+        <div class="gallery-item"><img src="./images/img0489.jpg"           alt="River table"></div>
+        <div class="gallery-item"><img src="./images/img2690.jpg"           alt="Burr wood table"></div>
+        <div class="gallery-item"><img src="./images/img2918.jpg"           alt="Coffee table"></div>
+        <div class="gallery-item"><img src="./images/img7161.JPG"           alt="Resin piece 7"></div>
+        <div class="gallery-item"><img src="./images/img7170.JPG"           alt="Resin piece 8"></div>
+      </div>
+    </div>
+
+    <div class="gallery-controls">
+      <button id="galleryPrev" class="btn-eon-outline" aria-label="Previous">&#8249;</button>
+      <button id="galleryNext" class="btn-eon-outline" aria-label="Next">&#8250;</button>
+    </div>
+  </section>
+
+
+<!-- Art Section -->
+
+  <section id="art" class="art-section">
+    <div class="container">
+
+      <h2 class="art-heading">Our Art</h2>
+      <p class="art-subheading">Click any piece to explore</p>
+
+      <div class="row">
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card art-card"
+               data-img="./images/resinwave.JPG"
+               data-title="Ocean Wave Panel"
+               data-desc="Resin art inspired by the breaking waves of the Cornish coast.">
+            <img src="./images/resinwave.JPG" class="card-img-top" alt="Ocean wave resin panel">
+            <div class="card-body">
+              <h5 class="card-title">Ocean Wave Panel</h5>
+              <p class="card-text">Cornish coast — resin on board</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card art-card"
+               data-img="./images/resinslateframed.JPG"
+               data-title="Slate Framed Piece"
+               data-desc="Deep ocean blues set in a clean white frame, on natural Cornish slate.">
+            <img src="./images/resinslateframed.JPG" class="card-img-top" alt="Slate framed resin">
+            <div class="card-body">
+              <h5 class="card-title">Slate Framed Piece</h5>
+              <p class="card-text">Framed resin — ocean collection</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card art-card"
+               data-img="./images/resinframedonrock.JPG"
+               data-title="Rock Series"
+               data-desc="A deep-sea resin piece displayed on raw Cornish rock.">
+            <img src="./images/resinframedonrock.JPG" class="card-img-top" alt="Resin framed on rock">
+            <div class="card-body">
+              <h5 class="card-title">Rock Series</h5>
+              <p class="card-text">Framed resin — deep sea</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card art-card"
+               data-img="./images/img0489.jpg"
+               data-title="River Table"
+               data-desc="Live-edge wood with a glowing pink resin river — a dramatic dining centrepiece.">
+            <img src="./images/img0489.jpg" class="card-img-top" alt="River table with pink resin">
+            <div class="card-body">
+              <h5 class="card-title">River Table</h5>
+              <p class="card-text">Live-edge oak — pink resin river</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card art-card"
+               data-img="./images/img2690.jpg"
+               data-title="Burr Wood Table Top"
+               data-desc="Stunning burr wood set in clear resin, every grain unique.">
+            <img src="./images/img2690.jpg" class="card-img-top" alt="Burr wood resin table top">
+            <div class="card-body">
+              <h5 class="card-title">Burr Wood Table Top</h5>
+              <p class="card-text">Burr wood — clear resin</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card art-card"
+               data-img="./images/img2918.jpg"
+               data-title="Coffee Table"
+               data-desc="Burl wood coffee table with copper hairpin legs — functional art for your home.">
+            <img src="./images/img2918.jpg" class="card-img-top" alt="Coffee table with copper legs">
+            <div class="card-body">
+              <h5 class="card-title">Coffee Table</h5>
+              <p class="card-text">Burl wood — copper hairpin legs</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="#contact" class="btn-eon-outline">Commission a bespoke piece</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
   </div>
 
-    <!-- arrow buttons -->
-  <div class="gallery-controls">
-    <button id="galleryPrev" class="btn-eon-outline">‹</button>
-    <button id="galleryNext" class="btn-eon-outline">›</button>
-  </div>
-
-</section>
 
 
 
 
 
 
-
-<section>
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2026 The Edge of Nature. All rights reserved .</p>
-  
-  </div>
-
-</section>
+<!-- Footer -->
 
 
+ <footer class="eon-footer" id="contact">
+    <div class="container">
+
+      <div class="row">
+
+        
+        <div class="col-md-5 mb-4 mb-md-0">
+          <span class="footer-brand">The Edge Of Nature</span>
+          <span class="footer-tagline">Handcrafted resin art — Cornwall, UK</span>
+        </div>
+
+        
+        <div class="col-md-4 mb-4 mb-md-0">
+          <p class="footer-social-heading">Follow us</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Etsy">Etsy</a>
+          </div>
+        </div>
+
+       
+        <div class="col-md-3 text-md-right">
+          <a href="mailto:hello@edgeofnature.co.uk" class="btn btn-eon">
+            Get in touch
+          </a>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider">
+
+     
+      <p class="footer-copy">&copy; 2026 The Edge of Nature. All rights reserved.</p>
+
+    </div>
+  </footer>
 
 
 
-   
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
 
 
 
@@ -116,33 +275,97 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 <!-- Scroll-Section-1 jQuery --> 
+
 <script>
-$(document).ready(function () {
+  
 
-  var scrollAmount = 340; // how far to jump each click (px)
+  
+    $(document).ready(function () {
 
-  // Next arrow — scroll right
-  $('#galleryNext').click(function () {
-    $('.gallery-viewport').animate(
-      { scrollLeft: $('.gallery-viewport').scrollLeft() + scrollAmount },
-      400  // animation speed in ms
-    );
-  });
+      $('#galleryNext').click(function () {
+        $('.gallery-viewport').animate(
+          { scrollLeft: $('.gallery-viewport').scrollLeft() + 340 },
+          400
+        );
+      });
 
-  // Prev arrow — scroll left
-  $('#galleryPrev').click(function () {
-    $('.gallery-viewport').animate(
-      { scrollLeft: $('.gallery-viewport').scrollLeft() - scrollAmount },
-      400
-    );
-  });
+      $('#galleryPrev').click(function () {
+        $('.gallery-viewport').animate(
+          { scrollLeft: $('.gallery-viewport').scrollLeft() - 340 },
+          400
+        );
+      });
 
-});
-</script>
+    });
+
+    
+    var cards = [];
+    var currentIndex = 0;
+
+    
+    document.querySelectorAll('.art-card').forEach(function (card, i) {
+      cards.push({
+        img:   card.dataset.img,
+        title: card.dataset.title,
+        desc:  card.dataset.desc
+      });
+
+     
+      card.addEventListener('click', function () {
+        openLightbox(i);
+      });
+    });
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden'; // stop page scrolling behind overlay
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = ''; // restore page scrolling
+    }
+
+    function updateLightbox() {
+      var item = cards[currentIndex];
+      document.getElementById('lightboxImg').src         = item.img;
+      document.getElementById('lightboxImg').alt         = item.title;
+      document.getElementById('lightboxCaption').textContent = item.title + ' — ' + item.desc;
+    }
+
+    
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+
+    
+    document.getElementById('lightboxNext').addEventListener('click', function () {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateLightbox();
+    });
+
+    document.getElementById('lightboxPrev').addEventListener('click', function () {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateLightbox();
+    });
+
+   
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % cards.length; updateLightbox(); }
+      if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + cards.length) % cards.length; updateLightbox(); }
+    });
+  </script>
+
+
 
 
 
