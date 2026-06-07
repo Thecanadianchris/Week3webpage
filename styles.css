@@ -75,6 +75,7 @@ body {
 .eon-nav .nav-link:hover { color: var(--bark) !important; }
 
 
+
 /* Button on Navbar */
 
 .btn-eon {
@@ -117,6 +118,26 @@ body {
   color: #fff !important; 
 
 }
+
+
+.navbar-toggler {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding: .25rem .75rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280%2C13%2C45%2C0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+
 
 
 
@@ -457,11 +478,7 @@ position: absolute;
   .eon-nav .container  { position: relative; }
 
   .navbar-collapse {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    left: auto;
-    width: 200px;
+   
     background: var(--warm-white);
     border: 5px solid var(--border);
     border-radius: 8px;
