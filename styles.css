@@ -405,6 +405,111 @@ position: absolute;
 .lightbox-next      { right: .5rem; }
 
 
+/* ---- Contact pop up---- */
+
+.contact-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.contact-overlay.active {
+  display: flex;
+}
+
+.contact-modal {
+  background: #0d2d3a;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.contact-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: rgba(248,240,229,.5);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color .2s;
+}
+
+.contact-close:hover { color: var(--golden); }
+
+.contact-modal-title {
+  font-family: var(--font-display);
+  color: var(--golden);
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: .25rem;
+}
+
+.contact-modal-sub {
+  color: var(--sand);
+  font-size: .82rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+
+.contact-field {
+  margin-bottom: 1.1rem;
+}
+
+.contact-field label {
+  display: block;
+  font-size: .78rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(248,240,229,.55);
+  margin-bottom: .35rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(207,161,91,.3);
+  border-radius: 2px;
+  padding: .65rem .85rem;
+  color: var(--warm-white);
+  font-family: var(--font-body);
+  font-size: .88rem;
+  outline: none;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: var(--golden);
+}
+
+.contact-field textarea {
+  resize: vertical;
+}
+
+.contact-field input[type="date"] {
+  color-scheme: dark;
+}
+
+
+
+
 /* ---- footer ---- */
 
 .eon-footer {

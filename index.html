@@ -36,6 +36,7 @@
               aria-controls="navMain"
               aria-expanded="false"
               aria-label="Toggle navigation">
+              <a href="#contact" class="btn-eon">Get in Touch</a>
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -253,12 +254,75 @@
 
        
         <div class="col-md-3 text-md-right">
-          <a href="mailto:hello@edgeofnature.co.uk" class="btn btn-eon">
+          <a href="#contact" class="btn btn-eon">
             Get in touch
           </a>
         </div>
 
       </div>
+
+
+
+      <!-- Conatct pop up  -->
+
+    <div class="contact-overlay" id="contactModal">
+  <div class="contact-modal">
+
+    
+    <button class="contact-close" id="contactClose" aria-label="Close">&times;</button>
+
+
+    <h2 class="contact-modal-title">Get in Touch</h2>
+    <p class="contact-modal-sub">We'd love to hear from you</p>
+
+  
+    <div id="contactForm">
+      <div class="contact-field">
+        <label for="c-name">Your Name</label>
+        <input type="text" id="c-name" placeholder="Christian Richard">
+      </div>
+      <div class="contact-field">
+        <label for="c-email">Email Address</label>
+        <input type="email" id="c-email" placeholder="chris@example.com">  
+      </div>
+      <div class="contact-field">
+        <label for="c-phone">Phone Number</label>
+        <input type="tel" id="c-phone" placeholder="+44 7700 000000">
+      </div>
+      <div class="contact-field">
+        <label for="c-dob">Date of Birth</label>
+        <input type="date" id="c-dob">
+      </div>
+      <div class="contact-field">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" rows="4" placeholder="Tell us about your project..."></textarea>
+      </div>
+      <button class="btn-eon" id="contactSubmit" style="width:100%;margin-top:.5rem;">
+        Send Message
+      </button>
+    </div>
+
+  
+    <div id="contactThanks" style="display:none; text-align:center; padding: 2rem 0;">
+      <div style="font-size:3rem; margin-bottom:1rem;">✉️</div>
+      <h3 style="font-family:var(--font-display); color:var(--sand); margin-bottom:.75rem;">
+        Thank you!
+      </h3>
+      <p style="color:rgba(248,240,229,.65); font-size:.9rem;">
+        We've received your message and will be in touch soon.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+</section>
+
+
+
+
 
       <hr class="footer-divider">
 
@@ -372,7 +436,61 @@
     });
   </script>
 
+<script>
+  
+  const modal        = document.getElementById('contactModal');
+  const closeBtn     = document.getElementById('contactClose');
+  const submitBtn    = document.getElementById('contactSubmit');
+  const form         = document.getElementById('contactForm');
+  const thanks       = document.getElementById('contactThanks');
 
+  
+  document.querySelectorAll('a[href="#contact"], .btn-contact').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.add('active');
+    });
+  });
+
+ 
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    resetForm();
+  });
+
+  
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+      resetForm();
+    }
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      modal.classList.remove('active');
+      resetForm();
+    }
+  });
+
+  
+  submitBtn.addEventListener('click', function() {
+    form.style.display   = 'none';
+    thanks.style.display = 'block';
+  });
+
+  
+  function resetForm() {
+    form.style.display   = 'block';
+    thanks.style.display = 'none';
+    document.getElementById('c-name').value    = '';
+    document.getElementById('c-email').value   = '';
+    document.getElementById('c-phone').value   = '';
+    document.getElementById('c-dob').value     = ''; 
+    document.getElementById('c-message').value = '';
+  }
+</script>
 
 
 
