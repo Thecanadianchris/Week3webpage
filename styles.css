@@ -465,6 +465,18 @@ position: absolute;
 }
 
 
+.footer-social a i {
+  font-size: 1.1rem;
+  margin-right: .35rem;
+  vertical-align: middle;
+  color: var(--golden);
+  transition: color .2s;
+}
+
+.footer-social a:hover i {
+  color: var(--sand);
+}
+
 
 
 
