@@ -4,7 +4,7 @@
   --text:       #0d2d3a;  /* nav links */
   --bark:       #1a6b8a;  /* logo text + hover colour */
   --deep:       #0d2d3a;  /* button hover */
-  --sand:       #734a08;  /* hero subheading + title highlight */
+  --sand:       #d2b27b;  /* hero subheading + title highlight */
   --golden:     #cfa15b;  /* gallery heading */
 
   --font-display: 'Playfair Display', Georgia, serif;
@@ -181,11 +181,19 @@ position: absolute;
 .hero-title em { font-style: italic; color: var(--sand); }
 .hero-sub {
   color: var(--sand);
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 300;
-  max-width: 420px;
+  max-width: 600px;
   margin-bottom: 2rem;
   line-height: 1.7;
+  text-shadow:
+   -.25px -.25px 0 #000,
+     .25px -.25px 0 #000,
+    -.25px  .25px 0 #000,
+     .25px  .25px 0 #000;
+
+
+
 }
 
 
