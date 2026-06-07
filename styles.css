@@ -272,8 +272,13 @@ position: absolute;
 
 .art-section {
   padding: 4rem 0 5rem;
-  background: var(--deep);
-}
+    background: linear-gradient(
+    to bottom,
+    var(--warm-white) 10%,
+    var(--warm-white) 20%,   
+    var(--deep)       70%,   
+    var(--deep)       100% 
+)}
 
 .art-heading {
   font-family: var(--font-display);
