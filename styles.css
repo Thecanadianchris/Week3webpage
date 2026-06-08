@@ -1,11 +1,11 @@
 :root {
-  --warm-white: #f8f0e5;  /* nav background */
-  --border:     #cfa15b;  /* nav bottom border */
-  --text:       #0d2d3a;  /* nav links */
+  --warm-white: #f8f0e5;  /* background */
+  --border:     #cfa15b;  /* border */
+  --text:       #0d2d3a;  /* links */
   --bark:       #1a6b8a;  /* logo text + hover colour */
   --deep:       #0d2d3a;  /* button hover */
-  --sand:       #d2b27b;  /* hero subheading + title highlight */
-  --golden:     #cfa15b;  /* gallery heading */
+  --sand:       #d2b27b;  /* title highlight */
+  --golden:     #cfa15b;  /*  heading */
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Jost', sans-serif;
