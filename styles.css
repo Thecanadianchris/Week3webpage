@@ -17,10 +17,7 @@
 body {
   --font-display: 'Playfair Display', times new roman, serif;
   --font-body:    'Jost', sans-serif;
-}
-
-body {
-  font-family: var(--font-body);
+  --font-family: var(--font-body);
   color: var(--text);
   background: linear-gradient(
     to bottom,
@@ -142,7 +139,7 @@ body {
 
 
 
-/* ---- HERO ---- */
+/*  HERO Section  */
 .hero-section {
   position: relative;
   min-height: 400px;
@@ -239,15 +236,15 @@ position: absolute;
   margin-bottom: 2rem;
 }
 .gallery-viewport {
-  overflow: hidden;       /* clips images outside the view */
+  overflow: hidden;       
   width: 100%;
 }
 .gallery-track {
   display: flex;
   gap: 1rem;
   padding: 0 1rem;
-  width: max-content;     /* as wide as all images combined */
-}
+  width: max-content;  
+}   
 .gallery-item {
   flex-shrink: 0;
   width: 320px;
@@ -270,7 +267,7 @@ position: absolute;
 
 
 
-/*-----Article Section-----*/
+/* / Art Section */
 
 .art-section {
   padding: 4rem 0 5rem;
@@ -342,7 +339,7 @@ position: absolute;
 }
 
 
-/* ---- Lightbox Section ---- */
+/*  Light box  Section  */
 
 .lightbox-overlay {
   display: none;
@@ -412,7 +409,7 @@ position: absolute;
 .lightbox-next      { right: .5rem; }
 
 
-/* ---- Contact pop up---- */
+/*  Contact pop up  */
 
 .contact-overlay {
   display: none;
@@ -517,7 +514,7 @@ position: absolute;
 
 
 
-/* ---- footer ---- */
+/*  footer   */
 
 .eon-footer {
   background: #071820;
