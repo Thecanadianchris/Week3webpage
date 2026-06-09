@@ -63,7 +63,7 @@
  <section class="hero-section">
 
     <img class="hero-img"
-         src="./images/wave.jpg"
+         src="./images/porth.jpg"
          alt="Aerial view of Cornish waves"
          onerror="this.style.display='none'">
 
@@ -375,124 +375,110 @@
 
     });
 
-    
     var cards = [];
-    var currentIndex = 0;
+var currentIndex = 0;
 
-    
-    document.querySelectorAll('.art-card').forEach(function (card, i) {
-      cards.push({
-        img:   card.dataset.img,
-        title: card.dataset.title,
-        desc:  card.dataset.desc
-      });
+$('.art-card').each(function (i) {
+  cards.push({
+    img:   $(this).data('img'),
+    title: $(this).data('title'),
+    desc:  $(this).data('desc')
+  });
 
-     
-      card.addEventListener('click', function () {
-        openLightbox(i);
-      });
-    });
-
+  $(this).on('click', function () {
+    openLightbox(i);
+  });
+});
+  
     function openLightbox(index) {
-      currentIndex = index;
-      updateLightbox();
-      document.getElementById('lightbox').classList.add('active');
-      document.body.style.overflow = 'hidden'; // stop page scrolling behind overlay
-    }
+  currentIndex = index;
+  updateLightbox();
+  $('#lightbox').addClass('active');
+  $('body').css('overflow', 'hidden');
+}
 
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-      document.body.style.overflow = ''; // restore page scrolling
-    }
+function closeLightbox() {
+  $('#lightbox').removeClass('active');
+  $('body').css('overflow', '');
+}
 
-    function updateLightbox() {
-      var item = cards[currentIndex];
-      document.getElementById('lightboxImg').src         = item.img;
-      document.getElementById('lightboxImg').alt         = item.title;
-      document.getElementById('lightboxCaption').textContent = item.title + ' — ' + item.desc;
-    }
+function updateLightbox() {
+  var item = cards[currentIndex];
+  $('#lightboxImg').attr('src', item.img);
+  $('#lightboxImg').attr('alt', item.title);
+  $('#lightboxCaption').text(item.title + ' — ' + item.desc);
+}
 
-    
-    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
 
-    
-    document.getElementById('lightboxNext').addEventListener('click', function () {
-      currentIndex = (currentIndex + 1) % cards.length;
-      updateLightbox();
-    });
+$('#lightboxClose').on('click', closeLightbox);
 
-    document.getElementById('lightboxPrev').addEventListener('click', function () {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      updateLightbox();
-    });
+$('#lightboxNext').on('click', function () {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateLightbox();
+});
 
-   
-    document.getElementById('lightbox').addEventListener('click', function (e) {
-      if (e.target === this) closeLightbox();
-    });
+$('#lightboxPrev').on('click', function () {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateLightbox();
+});
 
-    
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape')      closeLightbox();
-      if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % cards.length; updateLightbox(); }
-      if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + cards.length) % cards.length; updateLightbox(); }
-    });
+$('#lightbox').on('click', function (e) {
+  if ($(e.target).is(this)) closeLightbox();
+});
+
+$(document).on('keydown', function (e) {
+  if (e.key === 'Escape')     closeLightbox();
+  if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % cards.length; updateLightbox(); }
+  if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + cards.length) % cards.length; updateLightbox(); }
+});
+
+
+
   </script>
 
 <script>
   
-  const modal        = document.getElementById('contactModal');
-  const closeBtn     = document.getElementById('contactClose');
-  const submitBtn    = document.getElementById('contactSubmit');
-  const form         = document.getElementById('contactForm');
-  const thanks       = document.getElementById('contactThanks');
+$('a[href="#contact"], .btn-contact').on('click', function(e) {
+  e.preventDefault();
+  $('#contactModal').addClass('active');
+});
 
-  
-  document.querySelectorAll('a[href="#contact"], .btn-contact').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      modal.classList.add('active');
-    });
-  });
+$('#contactClose').on('click', function() {
+  $('#contactModal').removeClass('active');
+  resetForm();
+});
 
- 
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
+$('#contactModal').on('click', function(e) {
+  if ($(e.target).is(this)) {
+    $('#contactModal').removeClass('active');
     resetForm();
-  });
-
-  
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-      resetForm();
-    }
-  });
-
-  
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      modal.classList.remove('active');
-      resetForm();
-    }
-  });
-
-  
-  submitBtn.addEventListener('click', function() {
-    form.style.display   = 'none';
-    thanks.style.display = 'block';
-  });
-
-  
-  function resetForm() {
-    form.style.display   = 'block';
-    thanks.style.display = 'none';
-    document.getElementById('c-name').value    = '';
-    document.getElementById('c-email').value   = '';
-    document.getElementById('c-phone').value   = '';
-    document.getElementById('c-dob').value     = ''; 
-    document.getElementById('c-message').value = '';
   }
+});
+
+$(document).on('keydown', function(e) {
+  if (e.key === 'Escape') {
+    $('#contactModal').removeClass('active');
+    resetForm();
+  }
+});
+
+$('#contactSubmit').on('click', function() {
+  $('#contactForm').hide();
+  $('#contactThanks').show();
+});
+
+function resetForm() {
+  $('#contactForm').show();
+  $('#contactThanks').hide();
+  $('#c-name').val('');
+  $('#c-email').val('');
+  $('#c-phone').val('');
+  $('#c-dob').val('');
+  $('#c-message').val('');
+}
+
+
+
 </script>
 
 
